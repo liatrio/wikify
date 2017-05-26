@@ -2,5 +2,5 @@ about
 https://www.docker.com/what-docker
 docs
 https://docs.docker.com/
-tutorial
+tutorials
 https://prakhar.me/docker-curriculum/

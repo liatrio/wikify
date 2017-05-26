@@ -64,7 +64,9 @@ local function readTxt(i, path)
       if (section == 0) then
         toolAbout[i] = toolAbout[i] .. line .. "\n"
       elseif (section == 1) then
+        toolDocs[i] = toolDocs[i] .. line .. "\n"
       else
+        toolTutorials[i] = toolTutorials[i] .. line .. "\n"
       end
     end
     --for v in line:gmatch("([^"..','.."]+)") do
@@ -86,9 +88,13 @@ end
 -- Print debug information
 local function debug()
   for i,v in ipairs(tools) do
-    print("tools["..i.."] = "..v)
-    print("toolPaths["..i.."] = \n"..toolPaths[i])
-    print("toolAbout["..i.."] = \n"..toolAbout[i])
+    print("------------------------")
+    print("tool:\t"..v)
+    print("path:\t"..toolPaths[i])
+    print("About:\n"..toolAbout[i])
+    print("Docs:\n"..toolDocs[i])
+    print("Tutorials:\n"..toolTutorials[i])
+    print("------------------------")
   end
 end
 
