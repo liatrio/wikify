@@ -105,9 +105,10 @@ end
 local function printADT(tool)
   for i,v in ipairs(tools) do
     if (v == tool) then
-      print("\n\t\t\t--About "..v.."--\n"..toolAbout[i])
-      print("\t\t\t  --Docs--\n"..toolDocs[i])
-      print("\t\t\t--Tutorials--\n"..toolTutorials[i])
+      print("\n{{"..v.."}}")
+      print("\n------About------\n"..toolAbout[i])
+      print("------Docs-------\n"..toolDocs[i])
+      print("------Tutorials--\n"..toolTutorials[i])
       return
     end
   end
