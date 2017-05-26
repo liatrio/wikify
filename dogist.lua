@@ -69,12 +69,15 @@ local function readTxt(i, path)
         toolTutorials[i] = toolTutorials[i] .. line .. "\n"
       end
     end
-    --for v in line:gmatch("([^"..','.."]+)") do
-    --  grid[r][c].background = tonumber(v)
-    --  c = c + 1
-    --end
-    --r = r + 1
-    --c = 0
+  end
+end
+
+-- Remove the last newline generated from readTxt()
+local function pruneLastLine()
+  for i,v in ipairs(tools) do
+    toolAbout[i] = toolAbout[i]:sub(1, -2)
+    toolDocs[i] = toolDocs[i]:sub(1, -2)
+    toolTutorials[i] = toolTutorials[i]:sub(1, -2)
   end
 end
 
@@ -98,14 +101,28 @@ local function debug()
   end
 end
 
-assignToolValues()
-initializeToolProperties()
-createToolList()
-makePaths()
-readAllTxt()
---debug()
+-- Print the About, Docs, and Tutorials section of a given tool
+local function printADT(tool)
+  for i,v in ipairs(tools) do
+    if (v == tool) then
+      print("\n\t\t\t--About "..v.."--\n"..toolAbout[i])
+      print("\t\t\t  --Docs--\n"..toolDocs[i])
+      print("\t\t\t--Tutorials--\n"..toolTutorials[i])
+      return
+    end
+  end
+end
 
---print(args)  -- Assuming print is patched to handle tables nicely.
+-- Initialize functionality of dogist
+local function initialize()
+  assignToolValues()
+  initializeToolProperties()
+  createToolList()
+  makePaths()
+  readAllTxt()
+  --pruneLastLine()
+  --debug()
+end
 
 local argparse = require "argparse"
 
@@ -117,3 +134,6 @@ parser:option("-t --tutorials", "Limit gist to Tutorials only.")
 
 local args = parser:parse()
 
+initialize()
+
+printADT(args["tool"])
