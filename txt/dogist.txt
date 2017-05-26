@@ -1,10 +1,10 @@
 about
 dogist allows easy access to the gists of DevOps tools. A gist consists of
-information about the tool, a link to official documentation, and a link to
-a tutorial for beginners.
+information about the tool, a link to official documentation, and a link to a
+tutorial for beginners.
 docs
 The documentation for dogist can be found at
-<https://github.com/liatrio/dogist/wiki>
+<https://github.com/liatrio/dogist/wiki>.
 tutorials
 A tutorial for how to use and contribute to dogist can be found at
 <https://github.com/liatrio/dogist/blob/master/README.md>.

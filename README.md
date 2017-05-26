@@ -1,2 +1,3 @@
 # dogist
-Easily get the gist of DevOps tools.
+Easily get the gist of DevOps tools, including:  
+  - dsads
