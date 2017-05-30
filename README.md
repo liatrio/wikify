@@ -7,31 +7,9 @@ Easily get the gist of DevOps tools, including:
   - Tutorials
     - Link(s) to popular beginner tutorials
 
-#### Example
-Input:
-```
-lua dogist.lua dogist
-```
-
-Output:
-```
-
-{{dogist}}
-
-------About------
-dogist allows easy access to the gists of DevOps tools. A gist consists of
-information about the tool, a link to official documentation, and a link to a
-tutorial for beginners.
-
-------Docs-------
-The documentation for dogist can be found at
-<https://github.com/liatrio/dogist/wiki>.
-
-------Tutorials--
-A tutorial for how to use and contribute to dogist can be found at
-<https://github.com/liatrio/dogist/blob/master/README.md>.
-
-```
+#### Example  
+Note: the equivalent of this command when in production will be `/dogist dogist` (Gifs to be updated upon project release).  
+![Meta Example](https://shanemacbride.github.io/misc/dogistExample1.gif)
 
 #### Usage
 ```
