@@ -108,7 +108,9 @@ end
 -- Print the About, Docs, and Tutorials section of a given tool
 local function printADT(tool)
   for i,v in ipairs(tools) do
-    if (v == tool) then
+    if (tool == "list") then
+      print("("..i..") "..v)
+    elseif (v == tool) then
       print("\n{{"..v.."}}")
       print("\n------About------\n"..toolAbout[i])
       print("------Docs-------\n"..toolDocs[i])
@@ -136,12 +138,26 @@ initialize()
 local argparse = require "argparse"
 
 local parser = argparse("witdot", "Get DevOps tool information quickly.")
-parser:argument("tool", "Tool to obtain information about" .. toolList,
-                "witdot")
-parser:option("-a --about", "Limit to About only")
-parser:option("-d --docs", "Limit to Docs only")
-parser:option("-t --tutorials", "Limit to Tutorials only")
+
+parser:argument("tool", "Tool to obtain information about")
+  :args "0-1"
+
+parser:flag("-l --list", "List all Tools")
+parser:mutex(
+  parser:flag("-a --about", "Limit to About only"),
+  parser:flag("-d --docs", "Limit to Docs only"),
+  parser:flag("-t --tutorials", "Limit to Tutorials only")
+  )
 
 local args = parser:parse()
 
-printADT(args["tool"])
+if (args.list) then
+  printADT("list")
+end
+
+if (args["tool"] ~= nil) then
+  printADT(args["tool"])
+end
+--if(args.about) then print(args.about .. " " .. args["tool"]) end
+--if(args.docs) then print("docs true" .. args) end
+--if(args.tutorials) then print("tutorials true") end
