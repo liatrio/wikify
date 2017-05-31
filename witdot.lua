@@ -7,10 +7,14 @@ local toolPaths = {}
 local toolAbout = {}
 local toolDocs = {}
 local toolTutorials = {}
-local tools = {
-  "docker",
-  "witdot"
-}
+local tools = {}
+
+-- Assign tool names to the tools table
+local function inputToolNames()
+  for line in io.lines("toolList.txt") do
+    table.insert(tools, line)
+  end
+end
 
 -- Assign indices to the tools table
 local function assignToolValues()
@@ -116,6 +120,8 @@ end
 
 -- Initialize functionality of witdot
 local function initialize()
+  os.execute("./updateToolList.sh")
+  inputToolNames()
   assignToolValues()
   initializeToolProperties()
   createToolList()
