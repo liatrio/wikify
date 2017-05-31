@@ -1,25 +1,28 @@
-### dogist
-Easily get the gist of DevOps tools, including:  
-  - About
-    - A short description about the tool with a link to the homepage
-  - Docs
-    - A link to the official documentation for the tool
-  - Tutorials
-    - Link(s) to popular beginner tutorials
+### witdot  
+#### _What is this DevOps tool?_  
+Easily get the gist of DevOps tools.  
+  
+A simple command, such as `/witdot Jenkins`, will provide:  
+  
+| Section | Description |
+| :---:     |     :---      |
+| About     | A short description about the tool with a link to the homepage |
+| Docs      | A link to the official documentation for the tool |
+| Tutorials | Link(s) to popular beginner tutorials |
 
 #### Example  
-Note: the equivalent of this command when in production will be `/dogist dogist` (Gifs to be updated upon project release).  
+Note: the equivalent of this command when in production will be `/witdot witdot` (Gifs to be updated upon project release).  
 ![Meta Example](https://shanemacbride.github.io/misc/dogistExample1.gif)
 
 #### Usage
 ```
-Usage: dogist [-a <about>] [-d <docs>] [-t <tutorials>] [-h] [<tool>]
+Usage: witdot [-a <about>] [-d <docs>] [-t <tutorials>] [-h] [<tool>]
 
 Easily get the gist of DevOps tools.
 
 Arguments:
    tool                  Tool to get the gist of.
-                         Tools:  (default: dogist)
+                         Tools:  (default: witdot)
 
 Options:
    -a <about>, --about <about>
@@ -32,20 +35,20 @@ Options:
 ```
 
 #### Contributing
-Contributing to dogist is easy! All that is required for a tool to be added to dogist's arsenal is for a text file to be created and placed in the `txt` directory. dogist uses these text files to display information about tools.  
+Contributing to witdot is easy! All that is required for a tool to be added to witdot's arsenal is for a text file to be created and placed in the `txt` directory. witdot uses these text files to display information about tools.  
   
 This is an example of a properly formatted text file:
 ```
 about
-dogist allows easy access to the gists of DevOps tools. A gist consists of
+witdot allows easy access to the gists of DevOps tools. A gist consists of
 information about the tool, a link to official documentation, and a link to a
 tutorial for beginners.
 docs
-The documentation for dogist can be found at
-<https://github.com/liatrio/dogist/wiki>.
+The documentation for witdot can be found at
+<https://github.com/liatrio/witdot/wiki>.
 tutorials
-A tutorial for how to use and contribute to dogist can be found at
-<https://github.com/liatrio/dogist/blob/master/README.md>.
+A tutorial for how to use and contribute to witdot can be found at
+<https://github.com/liatrio/witdot/blob/master/README.md>.
 ```
 
 Guidelines for `.txt` files:
