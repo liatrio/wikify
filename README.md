@@ -31,20 +31,7 @@ Options:
 ```
   
 #### Contributing
-Contributing to witdot is easy! All that is required for a tool to be added to witdot's arsenal is for a text file to be created and placed in the `txt` directory. witdot uses these text files to display information about tools. Below is an example of a properly formatted text file.  
-  
-```
-about
-witdot allows easy access to the gists of DevOps tools. A gist consists of
-information about the tool, a link to official documentation, and a link to a
-tutorial for beginners.
-docs
-The documentation for witdot can be found at
-<https://github.com/liatrio/witdot/wiki>.
-tutorials
-A tutorial for how to use and contribute to witdot can be found at
-<https://github.com/liatrio/witdot/blob/master/README.md>.
-```
+Contributing to witdot is easy! All that is required for a tool to be added to witdot's arsenal is for a text file to be created and placed in the `txt` directory. witdot uses these text files to display information about tools. See [witdot.txt](https://github.com/liatrio/witdot/blob/master/txt/witdot.txt) for an example.
   
 | Text File Guidelines |
 | :---     |
