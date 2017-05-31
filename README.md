@@ -10,10 +10,9 @@ A simple command, such as `/witdot Jenkins`, will provide:
 | Docs      | A link to the official documentation for the tool |
 | Tutorials | Link(s) to popular beginner tutorials |
 
-#### Example  
-Note: the equivalent of this command when in production will be `/witdot witdot` (Gifs to be updated upon project release).  
-![Meta Example](https://shanemacbride.github.io/misc/dogistExample1.gif)
-
+#### Walkthrough  
+![Meta Example](https://shanemacbride.github.io/misc/witdotWalkthrough.gif)  
+  
 #### Usage
 ```
 Usage: witdot [-a <about>] [-d <docs>] [-t <tutorials>] [-h] [<tool>]
