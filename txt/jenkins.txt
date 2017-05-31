@@ -1,7 +1,7 @@
 about
 From <https://jenkins.io/>: "The leading open source automation server,
 Jenkins provides hundreds of plugins to support building, deploying and
-automating any project.
+automating any project."
 docs
 Find the documentation for Jenkins at <https://jenkins.io/doc/>.
 tutorials
