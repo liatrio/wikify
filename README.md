@@ -7,7 +7,7 @@ _What is this DevOps tool?_ Easily get the gist of DevOps tools.
 | Docs      | A link to the official documentation for the tool |
 | Tutorials | Link(s) to popular beginner tutorials |
 
-#### Example  
+#### Examples  
 ```
 $ /witdot jenkins
 
@@ -29,7 +29,10 @@ Continuous integration with Jenkins
 
 ```  
   
-#### Walkthrough  
+#### -l, --list
+![/witdot list](https://shanemacbride.github.io/misc/list.gif)  
+
+#### Contributing Walkthrough  
 ![Meta Example](https://shanemacbride.github.io/misc/witdotWalkthrough.gif)  
   
 #### Usage
