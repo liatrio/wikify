@@ -2,122 +2,69 @@
 layout: default
 ---
 
-Text can be **bold**, _italic_, or ~~strikethrough~~.
+Click [here](tools) to view the list of currently supported tools.
 
-[Link to another page](another-page).
+Easily get the gist of DevOps tools.    
+  
+| Section | Description |
+| :---:     |     :---      |
+| About     | A short description about the tool with a link to the homepage |
+| Docs      | A link to the official documentation for the tool |
+| Tutorials | Link(s) to popular beginner tutorials |
 
-There should be whitespace between paragraphs.
-
-There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
-
-# [](#header-1)Header 1
-
-This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
-
-## [](#header-2)Header 2
-
-> This is a blockquote following a header.
->
-> When something is important enough, you do it even if the odds are not in your favor.
-
-### [](#header-3)Header 3
-
-```js
-// Javascript code with syntax highlighting.
-var fun = function lang(l) {
-  dateformat.i18n = require('./lang/' + l)
-  return true;
-}
+#### Examples  
 ```
+$ /witdot jenkins
 
-```ruby
-# Ruby code with syntax highlighting
-GitHubPages::Dependencies.gems.each do |gem, version|
-  s.add_dependency(gem, "= #{version}")
-end
+{{jenkins}}
+
+------About------
+From <https://jenkins.io/>: "The leading open source automation server,
+Jenkins provides hundreds of plugins to support building, deploying and
+automating any project."
+
+------Docs-------
+Find the documentation for Jenkins at <https://jenkins.io/doc/>.
+
+------Tutorials--
+Jenkins Tutorial <https://www.tutorialspoint.com/jenkins/>
+Continuous integration with Jenkins
+<http://www.vogella.com/tutorials/Jenkins/article.html>
+
+
+```  
+  
+#### -l, --list
+![/witdot list](https://shanemacbride.github.io/misc/list.gif)  
+
+#### Contributing Walkthrough  
+![Meta Example](https://shanemacbride.github.io/misc/witdotWalkthrough.gif)  
+  
+#### Usage
 ```
+Usage: witdot ([-a] | [-d] | [-t]) [-l] [-h] [<tool>]
 
-#### [](#header-4)Header 4
+Get DevOps tool information quickly.
 
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
+Arguments:
+   tool                  Tool to obtain information about
 
-##### [](#header-5)Header 5
-
-1.  This is an ordered list following a header.
-2.  This is an ordered list following a header.
-3.  This is an ordered list following a header.
-
-###### [](#header-6)Header 6
-
-| head1        | head two          | three |
-|:-------------|:------------------|:------|
-| ok           | good swedish fish | nice  |
-| out of stock | good and plenty   | nice  |
-| ok           | good `oreos`      | hmm   |
-| ok           | good `zoute` drop | yumm  |
-
-### There's a horizontal rule below this.
-
-* * *
-
-### Here is an unordered list:
-
-*   Item foo
-*   Item bar
-*   Item baz
-*   Item zip
-
-### And an ordered list:
-
-1.  Item one
-1.  Item two
-1.  Item three
-1.  Item four
-
-### And a nested list:
-
-- level 1 item
-  - level 2 item
-  - level 2 item
-    - level 3 item
-    - level 3 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-
-### Small image
-
-![](https://assets-cdn.github.com/images/icons/emoji/octocat.png)
-
-### Large image
-
-![](https://guides.github.com/activities/hello-world/branching.png)
-
-
-### Definition lists can be used with HTML syntax.
-
-<dl>
-<dt>Name</dt>
-<dd>Godzilla</dd>
-<dt>Born</dt>
-<dd>1952</dd>
-<dt>Birthplace</dt>
-<dd>Japan</dd>
-<dt>Color</dt>
-<dd>Green</dd>
-</dl>
-
+Options:
+   -l, --list            List all Tools
+   -a, --about           Limit to About only
+   -d, --docs            Limit to Docs only
+   -t, --tutorials       Limit to Tutorials only
+   -h, --help            Show this help message and exit.
 ```
-Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
-```
+  
+#### Contributing
+Contributing to witdot is easy! All that is required for a tool to be added to witdot's arsenal is for a text file to be created and placed in the `tools` directory. witdot uses these text files to display information about tools. See [witdot.tool](https://github.com/liatrio/witdot/blob/master/tools/witdot.tool) for an example.
+  
+| Tool File Guidelines |
+| :---     |
+| filename should be `toolname.tool` |
+| categories indexed with `about`, `docs`, and `tutorials` |
+| <= 3 lines per category |
+| 80 char per line |
+| URLs surrounded with < > |
 
-```
-The final element.
-```

@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>witdot by </title>
+
+    <link href='https://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <script src="/assets/js/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header >
+        <h1>witdot</h1>
+        
+          <p>What is this DevOps tool?</p>
+        
+        <p class="view"><a href="">View the Project on GitHub <small></small></a></p>
+        <ul>
+        
+          <li><a href="">Download <strong>ZIP File</strong></a></li>
+          <li><a href="">Download <strong>TAR Ball</strong></a></li>
+        
+          <li><a href="">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+
+      <p>Click <a href="tools">here</a> to view the list of currently supported tools.</p>
+
+<p>Easily get the gist of DevOps tools.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Section</th>
+      <th style="text-align: left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">About</td>
+      <td style="text-align: left">A short description about the tool with a link to the homepage</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Docs</td>
+      <td style="text-align: left">A link to the official documentation for the tool</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Tutorials</td>
+      <td style="text-align: left">Link(s) to popular beginner tutorials</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="examples">Examples</h4>
+<div class="highlighter-rouge"><pre class="highlight"><code>$ /witdot jenkins
+
+
+
+------About------
+From &lt;https://jenkins.io/&gt;: "The leading open source automation server,
+Jenkins provides hundreds of plugins to support building, deploying and
+automating any project."
+
+------Docs-------
+Find the documentation for Jenkins at &lt;https://jenkins.io/doc/&gt;.
+
+------Tutorials--
+Jenkins Tutorial &lt;https://www.tutorialspoint.com/jenkins/&gt;
+Continuous integration with Jenkins
+&lt;http://www.vogella.com/tutorials/Jenkins/article.html&gt;
+
+
+</code></pre>
+</div>
+
+<h4 id="-l-list">-l, –list</h4>
+<p><img src="https://shanemacbride.github.io/misc/list.gif" alt="/witdot list" /></p>
+
+<h4 id="contributing-walkthrough">Contributing Walkthrough</h4>
+<p><img src="https://shanemacbride.github.io/misc/witdotWalkthrough.gif" alt="Meta Example" /></p>
+
+<h4 id="usage">Usage</h4>
+<div class="highlighter-rouge"><pre class="highlight"><code>Usage: witdot ([-a] | [-d] | [-t]) [-l] [-h] [&lt;tool&gt;]
+
+Get DevOps tool information quickly.
+
+Arguments:
+   tool                  Tool to obtain information about
+
+Options:
+   -l, --list            List all Tools
+   -a, --about           Limit to About only
+   -d, --docs            Limit to Docs only
+   -t, --tutorials       Limit to Tutorials only
+   -h, --help            Show this help message and exit.
+</code></pre>
+</div>
+
+<h4 id="contributing">Contributing</h4>
+<p>Contributing to witdot is easy! All that is required for a tool to be added to witdot’s arsenal is for a text file to be created and placed in the <code class="highlighter-rouge">tools</code> directory. witdot uses these text files to display information about tools. See <a href="https://github.com/liatrio/witdot/blob/master/tools/witdot.tool">witdot.tool</a> for an example.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Tool File Guidelines</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">filename should be <code class="highlighter-rouge">toolname.tool</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">categories indexed with <code class="highlighter-rouge">about</code>, <code class="highlighter-rouge">docs</code>, and <code class="highlighter-rouge">tutorials</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">&lt;= 3 lines per category</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">80 char per line</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">URLs surrounded with &lt; &gt;</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+      </section>
+    </div>
+    <footer>
+    
+      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
+    </footer>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+
+    
+      <script type="text/javascript">
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-74684239-4', 'auto');
+        ga('send', 'pageview');
+      </script>
+    
+  </body>
+</html>
