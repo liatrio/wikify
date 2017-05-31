@@ -17,3 +17,5 @@ do
   echo "  - [$tool]($url)" >> $(pwd)/docs/tools.md
 done
 
+echo "  " >> docs/tools.md
+echo "[back](./)" >> docs/tools.md
