@@ -31,11 +31,11 @@ Options:
 ```
   
 #### Contributing
-Contributing to witdot is easy! All that is required for a tool to be added to witdot's arsenal is for a text file to be created and placed in the `txt` directory. witdot uses these text files to display information about tools. See [witdot.txt](https://github.com/liatrio/witdot/blob/master/txt/witdot.txt) for an example.
+Contributing to witdot is easy! All that is required for a tool to be added to witdot's arsenal is for a text file to be created and placed in the `tools` directory. witdot uses these text files to display information about tools. See [witdot.tool](https://github.com/liatrio/witdot/blob/master/tools/witdot.tool) for an example.
   
-| Text File Guidelines |
+| Tool File Guidelines |
 | :---     |
-| filename should be `toolname.txt` |
+| filename should be `toolname.tool` |
 | categories indexed with `about`, `docs`, and `tutorials` |
 | <= 3 lines per category |
 | 80 char per line |
