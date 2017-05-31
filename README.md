@@ -1,8 +1,5 @@
 ### witdot  
-#### _What is this DevOps tool?_  
-Easily get the gist of DevOps tools.  
-  
-A simple command, such as `/witdot Jenkins`, will provide:  
+_What is this DevOps tool?_ Easily get the gist of DevOps tools.    
   
 | Section | Description |
 | :---:     |     :---      |
@@ -32,11 +29,10 @@ Options:
                          Limit gist to Tutorials only.
    -h, --help            Show this help message and exit.
 ```
-
-#### Contributing
-Contributing to witdot is easy! All that is required for a tool to be added to witdot's arsenal is for a text file to be created and placed in the `txt` directory. witdot uses these text files to display information about tools.  
   
-This is an example of a properly formatted text file:
+#### Contributing
+Contributing to witdot is easy! All that is required for a tool to be added to witdot's arsenal is for a text file to be created and placed in the `txt` directory. witdot uses these text files to display information about tools. Below is an example of a properly formatted text file.  
+  
 ```
 about
 witdot allows easy access to the gists of DevOps tools. A gist consists of
@@ -49,10 +45,11 @@ tutorials
 A tutorial for how to use and contribute to witdot can be found at
 <https://github.com/liatrio/witdot/blob/master/README.md>.
 ```
-
-Guidelines for `.txt` files:
-  - filename should be `toolname.txt`
-  - categories indexed with `about`, `docs`, and `tutorials`
-  - <= 3 lines per category
-  - 80 char per line
-  - URLs surrounded with < >
+  
+| Text File Guidelines |
+| :---     |
+| filename should be `toolname.txt` |
+| categories indexed with `about`, `docs`, and `tutorials` |
+| <= 3 lines per category |
+| 80 char per line |
+| URLs surrounded with < > |
