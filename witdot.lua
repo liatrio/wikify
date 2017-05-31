@@ -11,7 +11,7 @@ local tools = {}
 
 -- Assign tool names to the tools table
 local function inputToolNames()
-  for line in io.lines("toolList.txt") do
+  for line in io.lines("tools.list") do
     table.insert(tools, line)
   end
 end
@@ -46,14 +46,14 @@ local function createToolList()
   end
 end
 
--- Create the path to each txt file
+-- Create the path to each tool file
 local function makePaths()
   for i,v in ipairs(tools) do
-    toolPaths[i] = "txt/"..v..".txt"
+    toolPaths[i] = "tools/"..v..".tool"
   end
 end
 
--- Read the txt about each tool containing information About/Docs/Tutorials
+-- Read the .tool about each tool containing information About/Docs/Tutorials
 local function readTxt(i, path)
   -- sections: 0/about 1/docs 2/tutorials
   local section = 0
@@ -120,7 +120,7 @@ end
 
 -- Initialize functionality of witdot
 local function initialize()
-  os.execute("./updateToolList.sh")
+  os.execute("./update.sh")
   inputToolNames()
   assignToolValues()
   initializeToolProperties()
