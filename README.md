@@ -34,22 +34,18 @@ Continuous integration with Jenkins
   
 #### Usage
 ```
-Usage: witdot [-a <about>] [-d <docs>] [-t <tutorials>] [-h] [<tool>]
+Usage: witdot ([-a] | [-d] | [-t]) [-l] [-h] [<tool>]
 
 Get DevOps tool information quickly.
 
 Arguments:
    tool                  Tool to obtain information about
-                         Tools: docker jenkins vagrant
-                         witdot  (default: witdot)
 
 Options:
-   -a <about>, --about <about>
-                         Limit to About only
-   -d <docs>, --docs <docs>
-                         Limit to Docs only
-   -t <tutorials>, --tutorials <tutorials>
-                         Limit to Tutorials only
+   -l, --list            List all Tools
+   -a, --about           Limit to About only
+   -d, --docs            Limit to Docs only
+   -t, --tutorials       Limit to Tutorials only
    -h, --help            Show this help message and exit.
 ```
   
