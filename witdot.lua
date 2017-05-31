@@ -1,5 +1,5 @@
 --[[
-      File:  dogist.lua
+      File:  witdot.lua
 --]]
 
 local toolList = "\nTools: "
@@ -9,7 +9,7 @@ local toolDocs = {}
 local toolTutorials = {}
 local tools = {
   "docker",
-  "dogist"
+  "witdot"
 }
 
 -- Assign indices to the tools table
@@ -114,7 +114,7 @@ local function printADT(tool)
   end
 end
 
--- Initialize functionality of dogist
+-- Initialize functionality of witdot
 local function initialize()
   assignToolValues()
   initializeToolProperties()
@@ -125,16 +125,17 @@ local function initialize()
   --debug()
 end
 
+initialize()
+
 local argparse = require "argparse"
 
-local parser = argparse("dogist", "Easily get the gist of DevOps tools.")
-parser:argument("tool", "Tool to get the gist of." .. toolList, "dogist")
-parser:option("-a --about", "Limit gist to About only.")
-parser:option("-d --docs", "Limit gist to Docs only.")
-parser:option("-t --tutorials", "Limit gist to Tutorials only.")
+local parser = argparse("witdot", "Get DevOps tool information quickly.")
+parser:argument("tool", "Tool to obtain information about" .. toolList,
+                "witdot")
+parser:option("-a --about", "Limit to About only")
+parser:option("-d --docs", "Limit to Docs only")
+parser:option("-t --tutorials", "Limit to Tutorials only")
 
 local args = parser:parse()
-
-initialize()
 
 printADT(args["tool"])
