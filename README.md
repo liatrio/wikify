@@ -7,6 +7,28 @@ _What is this DevOps tool?_ Easily get the gist of DevOps tools.
 | Docs      | A link to the official documentation for the tool |
 | Tutorials | Link(s) to popular beginner tutorials |
 
+#### Example  
+```
+$ /witdot jenkins
+
+{{jenkins}}
+
+------About------
+From <https://jenkins.io/>: "The leading open source automation server,
+Jenkins provides hundreds of plugins to support building, deploying and
+automating any project."
+
+------Docs-------
+Find the documentation for Jenkins at <https://jenkins.io/doc/>.
+
+------Tutorials--
+Jenkins Tutorial <https://www.tutorialspoint.com/jenkins/>
+Continuous integration with Jenkins
+<http://www.vogella.com/tutorials/Jenkins/article.html>
+
+
+```  
+  
 #### Walkthrough  
 ![Meta Example](https://shanemacbride.github.io/misc/witdotWalkthrough.gif)  
   
@@ -14,19 +36,20 @@ _What is this DevOps tool?_ Easily get the gist of DevOps tools.
 ```
 Usage: witdot [-a <about>] [-d <docs>] [-t <tutorials>] [-h] [<tool>]
 
-Easily get the gist of DevOps tools.
+Get DevOps tool information quickly.
 
 Arguments:
-   tool                  Tool to get the gist of.
-                         Tools:  (default: witdot)
+   tool                  Tool to obtain information about
+                         Tools: docker jenkins vagrant
+                         witdot  (default: witdot)
 
 Options:
    -a <about>, --about <about>
-                         Limit gist to About only.
+                         Limit to About only
    -d <docs>, --docs <docs>
-                         Limit gist to Docs only.
+                         Limit to Docs only
    -t <tutorials>, --tutorials <tutorials>
-                         Limit gist to Tutorials only.
+                         Limit to Tutorials only
    -h, --help            Show this help message and exit.
 ```
   
