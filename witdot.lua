@@ -76,6 +76,15 @@ local function readTxt(i, path)
   end
 end
 
+-- Remove the last newline generated from readTxt()
+local function pruneLastLine()
+  for i,v in ipairs(tools) do
+    toolAbout[i] = toolAbout[i]:sub(1, -2)
+    toolDocs[i] = toolDocs[i]:sub(1, -2)
+    toolTutorials[i] = toolTutorials[i]:sub(1, -2)
+  end
+end
+
 -- call readTxt() on each tool's path
 local function readAllTxt()
   for i,v in ipairs(toolPaths) do
@@ -90,19 +99,26 @@ local function printADT(tool, limitation)
       print("("..i..") "..v)
     elseif (v == tool) then
       if (limitation == nil) then
-        print("\n{{"..v.."}}")
-        print("\n------About------\n"..toolAbout[i])
-        print("------Docs-------\n"..toolDocs[i])
-        print("------Tutorials--\n"..toolTutorials[i])
+        os.execute("echo \"\\033[34m==> \\033[1m\\033[92mAbout " ..
+                   v .. " \\033[0m\"")
+        print(toolAbout[i])
+        os.execute("echo \"\\033[34m==> \\033[1m\\033[92mDocs\\033[0m\"")
+        print(toolDocs[i])
+        os.execute("echo \"\\033[34m==> \\033[1m\\033[92mTutorials" ..
+                   "\\033[0m\"")
+        print(toolTutorials[i])
       elseif (limitation == "about") then
-        print("\n{{"..v.."}}")
-        print("\n------About------\n"..toolAbout[i])
+        os.execute("echo \"\\033[34m==> \\033[1m\\033[92mAbout " ..
+                   v .. " \\033[0m\"")
+        print(toolAbout[i])
       elseif (limitation == "docs") then
-        print("\n{{"..v.."}}")
-        print("\n------Docs-------\n"..toolDocs[i])
+        os.execute("echo \"\\033[34m==> \\033[1m\\033[92mDocs for " ..
+                   v .. " \\033[0m\"")
+        print(toolDocs[i])
       elseif (limitation == "tutorials") then
-        print("\n{{"..v.."}}")
-        print("\n------Tutorials--\n"..toolTutorials[i])
+        os.execute("echo \"\\033[34m==> \\033[1m\\033[92mTutorials for " ..
+                   v .. " \\033[0m\"")
+        print(toolTutorials[i])
       end
       return
     end
@@ -118,6 +134,7 @@ local function initialize()
   createToolList()
   makePaths()
   readAllTxt()
+  pruneLastLine()
 end
 
 initialize()

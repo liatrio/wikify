@@ -9,4 +9,3 @@ tutorials
 Vaagrant Tutorial <https://gist.github.com/dergachev/3866825>
 Introduction to Vagrant
 <https://code.tutsplus.com/tutorials/introduction-to-vagrant--cms-25917>
-

@@ -8,4 +8,3 @@ tutorials
 Jenkins Tutorial <https://www.tutorialspoint.com/jenkins/>
 Continuous integration with Jenkins
 <http://www.vogella.com/tutorials/Jenkins/article.html>
-
