@@ -76,32 +76,10 @@ local function readTxt(i, path)
   end
 end
 
--- Remove the last newline generated from readTxt()
-local function pruneLastLine()
-  for i,v in ipairs(tools) do
-    toolAbout[i] = toolAbout[i]:sub(1, -2)
-    toolDocs[i] = toolDocs[i]:sub(1, -2)
-    toolTutorials[i] = toolTutorials[i]:sub(1, -2)
-  end
-end
-
 -- call readTxt() on each tool's path
 local function readAllTxt()
   for i,v in ipairs(toolPaths) do
     readTxt(i, v)
-  end
-end
-
--- Print debug information
-local function debug()
-  for i,v in ipairs(tools) do
-    print("------------------------")
-    print("tool:\t"..v)
-    print("path:\t"..toolPaths[i])
-    print("About:\n"..toolAbout[i])
-    print("Docs:\n"..toolDocs[i])
-    print("Tutorials:\n"..toolTutorials[i])
-    print("------------------------")
   end
 end
 
@@ -129,8 +107,6 @@ local function initialize()
   createToolList()
   makePaths()
   readAllTxt()
-  --pruneLastLine()
-  --debug()
 end
 
 initialize()
