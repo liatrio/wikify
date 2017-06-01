@@ -29,29 +29,18 @@ Options:
    -h, --help            Show this help message and exit.
 ```
 
-#### Example
-```
-$ /witdot jenkins 
-
-Jenkins
-
-------About------
-From <https://jenkins.io/>: "The leading open source automation server,
-Jenkins provides hundreds of plugins to support building, deploying and
-automating any project."
-
-------Docs-------
-Find the documentation for Jenkins at <https://jenkins.io/doc/>.
-
-------Tutorials--
-Jenkins Tutorial <https://www.tutorialspoint.com/jenkins/>
-Continuous integration with Jenkins
-<http://www.vogella.com/tutorials/Jenkins/article.html>
-```  
+#### Examples
+![Examples](https://shanemacbride.github.io/misc/examples.gif)  
     
 #### -l, \-\-list  
-![/witdot list](https://shanemacbride.github.io/misc/list.gif)  
-  
+```
+/witdot -l
+(1) docker
+(2) jenkins
+(3) vagrant
+(4) witdot
+```
+   
 #### Contributing
 Contributing to witdot is easy! All that is required for a tool to be added to witdot's arsenal is for a text file to be created and placed in the `tools` directory. witdot uses these text files to display information about tools. See [witdot.tool](https://github.com/liatrio/witdot/blob/master/tools/witdot.tool) for an example.
   
