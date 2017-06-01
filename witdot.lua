@@ -142,14 +142,14 @@ if (args.list) then
   printADT("list")
 end
 
-if (args["tool"] ~= nil) then
+if (args.tool ~= nil) then
   if (args.about) then
-    printADT(args["tool"], "about")
+    printADT(args.tool, "about")
   elseif (args.docs) then
-    printADT(args["tool"], "docs")
+    printADT(args.tool, "docs")
   elseif (args.tutorials) then
-    printADT(args["tool"], "tutorials")
+    printADT(args.tool, "tutorials")
   else
-    printADT(args["tool"], nil)
+    printADT(args.tool, nil)
   end
 end
