@@ -1,12 +1,16 @@
 bitbucket
+chef
 confluence
 consul
 docker
+heroku
 hipchat
 jenkins
 jira
 nomad
+template
 terraform
+travisci
 trello
 vagrant
 vault
