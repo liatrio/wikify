@@ -84,15 +84,26 @@ local function readAllTxt()
 end
 
 -- Print the About, Docs, and Tutorials section of a given tool
-local function printADT(tool)
+local function printADT(tool, limitation)
   for i,v in ipairs(tools) do
     if (tool == "list") then
       print("("..i..") "..v)
     elseif (v == tool) then
-      print("\n{{"..v.."}}")
-      print("\n------About------\n"..toolAbout[i])
-      print("------Docs-------\n"..toolDocs[i])
-      print("------Tutorials--\n"..toolTutorials[i])
+      if (limitation == nil) then
+        print("\n{{"..v.."}}")
+        print("\n------About------\n"..toolAbout[i])
+        print("------Docs-------\n"..toolDocs[i])
+        print("------Tutorials--\n"..toolTutorials[i])
+      elseif (limitation == "about") then
+        print("\n{{"..v.."}}")
+        print("\n------About------\n"..toolAbout[i])
+      elseif (limitation == "docs") then
+        print("\n{{"..v.."}}")
+        print("\n------Docs-------\n"..toolDocs[i])
+      elseif (limitation == "tutorials") then
+        print("\n{{"..v.."}}")
+        print("\n------Tutorials--\n"..toolTutorials[i])
+      end
       return
     end
   end
@@ -132,8 +143,13 @@ if (args.list) then
 end
 
 if (args["tool"] ~= nil) then
-  printADT(args["tool"])
+  if (args.about) then
+    printADT(args["tool"], "about")
+  elseif (args.docs) then
+    printADT(args["tool"], "docs")
+  elseif (args.tutorials) then
+    printADT(args["tool"], "tutorials")
+  else
+    printADT(args["tool"], nil)
+  end
 end
---if(args.about) then print(args.about .. " " .. args["tool"]) end
---if(args.docs) then print("docs true" .. args) end
---if(args.tutorials) then print("tutorials true") end
