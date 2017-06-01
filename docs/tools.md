@@ -8,3 +8,5 @@ layout: default
   - [witdot](https://github.com/liatrio/witdot/blob/master/tools/witdot.tool)
   
 [back](./)
+  
+<small>This page was automatically generated via [this script](https://github.com/liatrio/witdot/blob/master/update.sh).</small>

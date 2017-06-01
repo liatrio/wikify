@@ -19,3 +19,5 @@ done
 
 echo "  " >> docs/tools.md
 echo "[back](./)" >> docs/tools.md
+echo "  " >> docs/tools.md
+echo "<small>This page was automatically generated via [this script](https://github.com/liatrio/witdot/blob/master/update.sh).</small>" >> docs/tools.md
