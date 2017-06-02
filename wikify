@@ -39,14 +39,14 @@ I=index.md
 GHURL="https://github.com/$G/$R"
 
 # Arrow Symbol
-A="&#8594"
+A="&#8594;"
 
 rm -rf ./$W/$T/*
 mkdir -p ./$W/$T/lists/$S
 
 cat ./$H >> ./$W/$T/$I
 
-echo -e "[Home](/$R/) &#8594; [$S](/$R/$T)" >> ./$W/$T/$I
+echo -e "[Home](/$R/) $A [$S](/$R/$T)" >> ./$W/$T/$I
 
 for i in ./$F/*
 do
