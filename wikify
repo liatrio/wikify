@@ -12,7 +12,7 @@ do
   baseURL="https://github.com/liatrio/wikify/blob/master/content/"
   url="$baseURL$section/"
   echo "$section" >> $(pwd)/docs/generated/lists/sections.list
-  echo "  - [$section](/generated/$section)" >> $(pwd)/docs/generated/content.md
+  echo "  - [$section](./$section)" >> $(pwd)/docs/generated/content.md
   echo "    - [Edit $section on GitHub]($url)" >> $(pwd)/docs/generated/content.md
   echo -e "---\nlayout: default\n---\n# [$section]($url)" >> docs/generated/$section.md
   for j in $i/*
@@ -22,7 +22,7 @@ do
     echo "$page" >> $(pwd)/docs/generated/lists/sections/$section.list
     echo "  - [$page]($pageURL)" >> $(pwd)/docs/generated/$section.md
   done
-  echo -e "\n[Back to Sections](/generated/content)\n"\
+  echo -e "\n[Back to Sections](../.)\n"\
 >>$(pwd)/docs/generated/$section.md
 done
 
