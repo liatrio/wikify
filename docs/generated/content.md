@@ -7,6 +7,6 @@ layout: default
   - [Toolbelt](/wikify/generated/Toolbelt)
     - [Edit Toolbelt on GitHub](https://github.com/liatrio/wikify/blob/master/content/Toolbelt/)
 
-[back](/)
+[Back to Home](/wikify/)
 
 <small>This page was automatically generatedvia [this script](https://github.com/liatrio/wikify/blob/master/wikify).</small>
