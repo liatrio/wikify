@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-# [Tools](https://github.com/liatrio/witdot/tree/master/tools)
+# [Tools](https://github. com/liatrio/witdot/tree/master/tools)
   - [aws](https://github.com/liatrio/witdot/blob/master/tools/aws.tool)
   - [bitbucket](https://github.com/liatrio/witdot/blob/master/tools/bitbucket.tool)
   - [chef](https://github.com/liatrio/witdot/blob/master/tools/chef.tool)
@@ -29,7 +29,7 @@ layout: default
   - [vagrant](https://github.com/liatrio/witdot/blob/master/tools/vagrant.tool)
   - [vault](https://github.com/liatrio/witdot/blob/master/tools/vault.tool)
   - [witdot](https://github.com/liatrio/witdot/blob/master/tools/witdot.tool)
-  
+
 [back](./)
-  
-<small>This page was automatically generated via [this script](https://github.com/liatrio/witdot/blob/master/update.sh).</small>
+
+<small>This page was automatically generated via [this script](https://github.com/liatrio/witdot/blob/ master/update.sh).</small>

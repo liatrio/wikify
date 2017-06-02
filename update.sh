@@ -1,13 +1,9 @@
 #!/bin/bash
 
-rm -f tools.list
-rm -rf docs/tools.md
+rm -f tools.list docs/tools.md
 
-echo "---" >> docs/tools.md
-echo "layout: default" >> docs/tools.md
-echo "---" >> docs/tools.md
-echo "# [Tools](https://github.com/liatrio/witdot/tree/master/tools)" \
-  >> docs/tools.md
+echo -e "---\nlayout: default\n---\n# [Tools](https://github." \
+"com/liatrio/witdot/tree/master/tools)" >> docs/tools.md
 
 for i in $(pwd)/tools/*
 do
@@ -17,7 +13,6 @@ do
   echo "  - [$tool]($url)" >> $(pwd)/docs/tools.md
 done
 
-echo "  " >> docs/tools.md
-echo "[back](./)" >> docs/tools.md
-echo "  " >> docs/tools.md
-echo "<small>This page was automatically generated via [this script](https://github.com/liatrio/witdot/blob/master/update.sh).</small>" >> docs/tools.md
+echo -e "\n[back](./)\n\n<small>This page was automatically generated" \
+"via [this script](https://github.com/liatrio/witdot/blob/" \
+"master/update.sh).</small>" >> docs/tools.md
