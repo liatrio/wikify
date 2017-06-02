@@ -26,7 +26,7 @@ do
 >>$(pwd)/docs/generated/$section.md
 done
 
-echo -e "\n[back](/)\n\n<small>This page was automatically generated"\
+echo -e "\n[Back to Home](/wikify/)\n\n<small>This page was automatically generated"\
 "via [this script](https://github.com/liatrio/wikify/blob/"\
 "master/wikify).</small>" >> docs/generated/content.md
 
