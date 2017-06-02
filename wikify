@@ -57,8 +57,7 @@ for i in ./$F/*
 do
   # Grab The Section Title (/path/to/section -> section)
   B=$(basename $i)
-  baseURL="$GHURL/blob/master/$F"
-  url="$baseURL/$B/"
+  url="$GHURL/raw/master/$F/$B/"
   echo "$B" >> ./$W/$T/lists/$S.list
   echo "  - [$B](/$R/$T/$B)" >> ./$W/$T/$I
   cat ./$H >> ./$W/$T/$B.md
