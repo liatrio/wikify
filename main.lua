@@ -127,7 +127,6 @@ end
 
 -- Initialize functionality of witdot
 local function initialize()
-  os.execute("./update.sh")
   inputToolNames()
   assignToolValues()
   initializeToolProperties()

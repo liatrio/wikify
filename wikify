@@ -1,3 +1,20 @@
 #!/bin/bash
 
+rm -f sections.list docs/content.md
+
+echo -e "---\nlayout: default\n---\n# [Sections](https://github."\
+"com/liatrio/wikify/tree/master/content)" >> docs/content.md
+
+for i in $(pwd)/content/*
+do
+  section=$(basename $i | cut -f 1 -d '.')
+  url="https://github.com/liatrio/wikify/blob/master/content/$section"
+  echo "$section" >> $(pwd)/sections.list
+  echo "  - [$section]($url)" >> $(pwd)/docs/content.md
+done
+
+echo -e "\n[back](./)\n\n<small>This page was automatically generated"\
+"via [this script](https://github.com/liatrio/wikify/blob/"\
+"master/wikify).</small>" >> docs/content.md
+
 lua main.lua $1 $2 $3 $4 $5 $6
