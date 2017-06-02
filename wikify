@@ -55,7 +55,7 @@ do
   echo "    - [Edit $B on GitHub]($url)" >> ./$W/$T/$I
   cat ./$H >> ./$W/$T/$B.md
   echo -e "[Home](/$R/) &#8594; [$S](/$R/$T)"\
-") &#8594; [$B](/$R/$T/$B)" >> ./$W/$T/$B.md
+" &#8594; [$B](/$R/$T/$B)  " >> ./$W/$T/$B.md
   echo "  - [$PAGE]($PAGEURL)" >> ./$W/$T/$B.md
   for j in $i/*
   do
@@ -64,7 +64,6 @@ do
     echo "$PAGE" >> ./$W/$T/lists/$S/$B.list
     echo "  - [$PAGE]($PAGEURL)" >> ./$W/$T/$B.md
   done
-  echo -e "\n[Back to $S](/$R/$T)\n" >> ./$W/$T/$B.md
 done
 
 echo -e "\n\n<small>This page was automatically"\
