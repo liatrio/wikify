@@ -61,7 +61,7 @@ do
     echo "$PAGE" >> ./$W/$T/lists/$S/$B.list
     echo "  - [$PAGE]($PAGEURL)" >> ./$W/$T/$B.md
   done
-  echo -e "\n[Back to $S](/$R/$T/$I)\n" >> ./$W/$T/$B.md
+  echo -e "\n[Back to $S](/$R/$T)\n" >> ./$W/$T/$B.md
 done
 
 echo -e "\n[Back to Home](/$R/)\n\n<small>This page was automatically"\
