@@ -1,8 +1,8 @@
 #!/bin/bash
 
-############
-# SETTINGS #
-############
+            ############
+############# SETTINGS #############
+            ############
 
 # GitHub Username
 G=liatrio
@@ -16,7 +16,7 @@ W=docs
 # Title of Content
 T=example
 
-# Subsections Name (sections, chapters, modules
+# Subsections Name (sections, chapters, modules, groups, teams, squads)
 S=Sections
 
 # Extension of Pages
@@ -28,12 +28,7 @@ H=header.txt
 # Files to be Converted Location
 F=content
 
-# Home Page
-I=index.md
-
-############
-############
-############
+####################################
 
 # GitHub URL
 GHURL="https://github.com/$G/$R"
@@ -41,31 +36,46 @@ GHURL="https://github.com/$G/$R"
 # Arrow Symbol
 A="&#8594;"
 
+# Home Page
+I=index.md
+
+# Delete the Old Content
 rm -rf ./$W/$T/*
+
+# Recreate the Folders
 mkdir -p ./$W/$T/lists/$S
 
+# Top Off the Home Page with the header
 cat ./$H >> ./$W/$T/$I
 
-echo -e "[Home](/$R/) $A [$S](/$R/$T)" >> ./$W/$T/$I
+# Set Home -> Sections Navigation
+HS="[Home](/$R/) $A [$S](/$R/$T)"
 
+# Add Home -> Sections Navigation to the Home Page
+echo -e "$HS" >> ./$W/$T/$I
+
+# For Every Subdirectory in F (content)
 for i in ./$F/*
 do
+  # Grab The Section Title (/path/to/section -> section)
   B=$(basename $i)
   baseURL="$GHURL/blob/master/$F"
   url="$baseURL/$B/"
   echo "$B" >> ./$W/$T/lists/$S.list
   echo "  - [$B](/$R/$T/$B)" >> ./$W/$T/$I
   cat ./$H >> ./$W/$T/$B.md
-  echo -e "[Home](/$R/) $A [$S](/$R/$T) $A [$B](/$R/$T/$B)">> ./$W/$T/$B.md
+  HSB="$HS $A [$B](/$R/$T/$B)"
+  echo -e "$HSB" >> ./$W/$T/$B.md
   for j in $i/*
   do
+    mkdir ./$W/$T/$B 2> /dev/null
     PAGE=$(basename $j | cut -f 1 -d '.')
+    cat ./$H >> ./$W/$T/$B/$PAGE.md
+    HSBP="$HSB $A [$PAGE](./$W/$T/$B/$PAGE)"
+    echo -e "$HSBP" >> ./$W/$T/$B/$PAGE.md
     PAGEURL="$url$PAGE.$E"
     echo "$PAGE" >> ./$W/$T/lists/$S/$B.list
-    echo "  - [$PAGE]($PAGEURL)" >> ./$W/$T/$B.md
+    echo "  - [$PAGE](./$W/$T/$B/$PAGE)" >> ./$W/$T/$B.md
+    echo "test" >> ./$W/$T/$B/$PAGE.md
   done
 done
-
-echo -e "\n\n<small>This page was automatically"\
-" generated via [wikify]($GHURL/blob/master/$R)."\
-"</small>" >> ./$W/$T/$I
