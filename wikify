@@ -71,11 +71,11 @@ do
     mkdir ./$W/$T/$B 2> /dev/null
     PAGE=$(basename $j | cut -f 1 -d '.')
     cat ./$H >> ./$W/$T/$B/$PAGE.md
-    HSBP="$HSB $A [$PAGE](./$B/$PAGE)"
+    HSBP="$HSB $A [$PAGE](/$R/$T/$B/$PAGE)"
     echo -e "$HSBP" >> ./$W/$T/$B/$PAGE.md
     PAGEURL="$url$PAGE.$E"
     echo "$PAGE" >> ./$W/$T/lists/$S/$B.list
-    echo "  - [$PAGE](./$B/$PAGE)" >> ./$W/$T/$B.md
+    echo "  - [$PAGE](/$R/$W/$T/$B/$PAGE)" >> ./$W/$T/$B.md
     echo -e "\ntest" >> ./$W/$T/$B/$PAGE.md
   done
 done
