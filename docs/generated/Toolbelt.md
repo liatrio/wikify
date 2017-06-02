@@ -1,0 +1,2 @@
+  - [github](https://github.com/liatrio/wikify/blob/master/content/Toolbeltgithub)
+  - [slack](https://github.com/liatrio/wikify/blob/master/content/Toolbeltslack)

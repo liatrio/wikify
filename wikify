@@ -1,20 +1,29 @@
 #!/bin/bash
 
-rm -f sections.list docs/content.md
+rm -rf docs/generated/*
+mkdir -p $(pwd)/docs/generated/lists/sections
 
 echo -e "---\nlayout: default\n---\n# [Sections](https://github."\
-"com/liatrio/wikify/tree/master/content)" >> docs/content.md
+"com/liatrio/wikify/tree/master/content)" >> docs/generated/content.md
 
 for i in $(pwd)/content/*
 do
-  section=$(basename $i | cut -f 1 -d '.')
-  url="https://github.com/liatrio/wikify/blob/master/content/$section"
-  echo "$section" >> $(pwd)/sections.list
-  echo "  - [$section]($url)" >> $(pwd)/docs/content.md
+  section=$(basename $i)
+  baseURL="https://github.com/liatrio/wikify/blob/master/content/"
+  url="$baseURL$section"
+  echo "$section" >> $(pwd)/docs/generated/lists/sections.list
+  echo "  - [$section]($url)" >> $(pwd)/docs/generated/content.md
+  for j in $i/*
+  do
+    page=$(basename $j | cut -f 1 -d '.')
+    pageURL="$url$page"
+    echo "$page" >> $(pwd)/docs/generated/lists/sections/$section.list
+    echo "  - [$page]($pageURL)" >> $(pwd)/docs/generated/$section.md
+  done
 done
 
 echo -e "\n[back](./)\n\n<small>This page was automatically generated"\
 "via [this script](https://github.com/liatrio/wikify/blob/"\
-"master/wikify).</small>" >> docs/content.md
+"master/wikify).</small>" >> docs/generated/content.md
 
 lua main.lua $1 $2 $3 $4 $5 $6
