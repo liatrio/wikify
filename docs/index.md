@@ -2,7 +2,7 @@
 layout: default
 ---
 
-Click [here](content) to view information sections.
+Click [here](generated/content) to view information sections.
 
 #### Usage
 ```

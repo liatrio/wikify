@@ -10,19 +10,23 @@ for i in $(pwd)/content/*
 do
   section=$(basename $i)
   baseURL="https://github.com/liatrio/wikify/blob/master/content/"
-  url="$baseURL$section"
+  url="$baseURL$section/"
   echo "$section" >> $(pwd)/docs/generated/lists/sections.list
-  echo "  - [$section]($url)" >> $(pwd)/docs/generated/content.md
+  echo "  - [$section](/generated/$section)" >> $(pwd)/docs/generated/content.md
+  echo "    - [Edit $section on GitHub]($url)" >> $(pwd)/docs/generated/content.md
+  echo -e "---\nlayout: default\n---\n# [$section]($url)" >> docs/generated/$section.md
   for j in $i/*
   do
     page=$(basename $j | cut -f 1 -d '.')
-    pageURL="$url$page"
+    pageURL="$url$page.page"
     echo "$page" >> $(pwd)/docs/generated/lists/sections/$section.list
     echo "  - [$page]($pageURL)" >> $(pwd)/docs/generated/$section.md
   done
+  echo -e "\n[Back to Sections](/generated/content)\n"\
+>>$(pwd)/docs/generated/$section.md
 done
 
-echo -e "\n[back](./)\n\n<small>This page was automatically generated"\
+echo -e "\n[back](/)\n\n<small>This page was automatically generated"\
 "via [this script](https://github.com/liatrio/wikify/blob/"\
 "master/wikify).</small>" >> docs/generated/content.md
 
