@@ -1,8 +1,6 @@
 #!/bin/bash
 
-            ############
 ############# SETTINGS #############
-            ############
 
 # GitHub Username
 G=liatrio
@@ -10,19 +8,19 @@ G=liatrio
 # Repository Name
 R=wikify
 
-# Website Directory
+# Website Directory -> Where should the generated content be placed?
 W=docs
 
 # Title of Content
 T=example
 
-# Subsections Name (sections, chapters, modules, groups, teams, squads)
+# Subsections Name -> sections, chapters, modules, groups, teams, squads, etc.
 S=Sections
 
 # Extension of Pages
 E=pdf
 
-# Header Attached to the Top of Each Page
+# Header Attached to the Top of Each Generated Page
 H=header.txt
 
 # Files to be Converted Location
@@ -76,6 +74,12 @@ do
     PAGEURL="$url$PAGE.$E"
     echo "$PAGE" >> ./$W/$T/lists/$S/$B.list
     echo "  - [$PAGE](/$R/$T/$B/$PAGE)" >> ./$W/$T/$B.md
-    echo -e "\ntest" >> ./$W/$T/$B/$PAGE.md
+    cat << EOM > ./$W/$T/$B/$PAGE.md
+\n<object data="$PAGEURL" type="application/pdf" width="700px" height="700px">
+    <embed src="$PAGEURL">
+        This browser does not support PDFs. Please download the PDF to view it: <a href="$PAGEURL">Download PDF</a>.</p>
+    </embed>
+</object>
+EOM
   done
 done
