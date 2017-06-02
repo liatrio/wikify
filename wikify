@@ -1,33 +1,71 @@
 #!/bin/bash
 
-rm -rf docs/generated/*
-mkdir -p $(pwd)/docs/generated/lists/sections
+############
+# SETTINGS #
+############
 
-echo -e "---\nlayout: default\n---\n# [Sections](https://github."\
-"com/liatrio/wikify/tree/master/content)" >> docs/generated/content.md
+# GitHub Username
+G=liatrio
 
-for i in $(pwd)/content/*
+# Repository Name
+R=wikify
+
+# Website Directory
+W=docs
+
+# Title of Content
+T=example
+
+# Subsections Name (sections, chapters, modules
+S=Sections
+
+# Extension of Pages
+E=pdf
+
+# Header Attached to the Top of Each Page
+H=header.txt
+
+# Files to be Converted Location
+F=content
+
+# Home Page
+I=index.md
+
+############
+############
+############
+
+# GitHub URL
+GHURL="https://github.com/$G/$R"
+
+rm -rf ./$W/$T/*
+mkdir -p ./$W/$T/lists/$S
+
+cat ./$H >> ./$W/$T/$I
+
+echo -e "# [Sections]($GHURL/tree/master/content)" >> ./$W/$T/$I
+
+for i in ./$F/*
 do
-  section=$(basename $i)
-  baseURL="https://github.com/liatrio/wikify/blob/master/content/"
-  url="$baseURL$section/"
-  echo "$section" >> $(pwd)/docs/generated/lists/sections.list
-  echo "  - [$section](/wikify/generated/$section)" >> $(pwd)/docs/generated/content.md
-  echo "    - [Edit $section on GitHub]($url)" >> $(pwd)/docs/generated/content.md
-  echo -e "---\nlayout: default\n---\n# [$section]($url)" >> docs/generated/$section.md
+  B=$(basename $i)
+  baseURL="$GHURL/blob/master/$F"
+  url="$baseURL/$B/"
+  echo "$B" >> ./$W/$T/lists/$S.list
+  echo "  - [$B](/$R/$T/$B)" >> ./$W/$T/$I
+  echo "    - [Edit $B on GitHub]($url)" >> ./$W/$T/$I
+  cat ./$H >> ./$W/$T/$B.md
   for j in $i/*
   do
-    page=$(basename $j | cut -f 1 -d '.')
-    pageURL="$url$page.page"
-    echo "$page" >> $(pwd)/docs/generated/lists/sections/$section.list
-    echo "  - [$page]($pageURL)" >> $(pwd)/docs/generated/$section.md
+    PAGE=$(basename $j | cut -f 1 -d '.')
+    PAGEURL="$url$PAGE.$E"
+    echo "$PAGE" >> ./$W/$T/lists/$S/$B.list
+    echo "  - [$PAGE]($PAGEURL)" >> ./$W/$T/$B.md
   done
-  echo -e "\n[Back to Sections](/wikify/generated/content)\n"\
->>$(pwd)/docs/generated/$section.md
+  echo -e "\n[Back to $S](/$R/$T/$F)\n" >> ./$W/$T/$B.md
 done
 
-echo -e "\n[Back to Home](/wikify/)\n\n<small>This page was automatically generated"\
-"via [this script](https://github.com/liatrio/wikify/blob/"\
-"master/wikify).</small>" >> docs/generated/content.md
+echo -e "\n[Back to Home](/$R/)\n\n<small>This page was automatically"\
+" generated via [this script]($GHURL/blob/master/$R)."\
+"</small>" >> ./$W/$T/$I
 
 lua main.lua $1 $2 $3 $4 $5 $6

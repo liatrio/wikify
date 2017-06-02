@@ -2,11 +2,11 @@
 layout: default
 ---
 # [Sections](https://github.com/liatrio/wikify/tree/master/content)
-  - [Bios](/wikify/generated/Bios)
+  - [Bios](/wikify/example/Bios)
     - [Edit Bios on GitHub](https://github.com/liatrio/wikify/blob/master/content/Bios/)
-  - [Toolbelt](/wikify/generated/Toolbelt)
+  - [Toolbelt](/wikify/example/Toolbelt)
     - [Edit Toolbelt on GitHub](https://github.com/liatrio/wikify/blob/master/content/Toolbelt/)
 
 [Back to Home](/wikify/)
 
-<small>This page was automatically generatedvia [this script](https://github.com/liatrio/wikify/blob/master/wikify).</small>
+<small>This page was automatically generated via [this script](https://github.com/liatrio/wikify/blob/master/wikify).</small>
