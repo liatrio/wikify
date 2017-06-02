@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-[Home](/wikify/) &#8594; [Sections](https://github.com/liatrio/wikify/tree/master/content)
+[Home](/wikify/) &#8594; [Sections](/wikify/example)
   - [Bios](/wikify/example/Bios)
     - [Edit Bios on GitHub](https://github.com/liatrio/wikify/blob/master/content/Bios/)
   - [Toolbelt](/wikify/example/Toolbelt)
