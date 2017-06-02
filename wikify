@@ -75,7 +75,7 @@ do
     echo -e "$HSBP" >> ./$W/$T/$B/$PAGE.md
     PAGEURL="$url$PAGE.$E"
     echo "$PAGE" >> ./$W/$T/lists/$S/$B.list
-    echo "  - [$PAGE](./$W/$T/$B/$PAGE)" >> ./$W/$T/$B.md
+    echo "  - [$PAGE](./$B/$PAGE)" >> ./$W/$T/$B.md
     echo "test" >> ./$W/$T/$B/$PAGE.md
   done
 done
