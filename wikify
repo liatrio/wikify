@@ -43,7 +43,7 @@ mkdir -p ./$W/$T/lists/$S
 
 cat ./$H >> ./$W/$T/$I
 
-echo -e "# [Sections]($GHURL/tree/master/content)" >> ./$W/$T/$I
+echo -e "[Home](/$R/) &#8594; [$S]($GHURL/tree/master/content)" >> ./$W/$T/$I
 
 for i in ./$F/*
 do
@@ -64,8 +64,8 @@ do
   echo -e "\n[Back to $S](/$R/$T)\n" >> ./$W/$T/$B.md
 done
 
-echo -e "\n[Back to Home](/$R/)\n\n<small>This page was automatically"\
-" generated via [this script]($GHURL/blob/master/$R)."\
+echo -e "\n\n<small>This page was automatically"\
+" generated via [wikify]($GHURL/blob/master/$R)."\
 "</small>" >> ./$W/$T/$I
 
 lua main.lua $1 $2 $3 $4 $5 $6
