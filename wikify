@@ -38,6 +38,9 @@ I=index.md
 # GitHub URL
 GHURL="https://github.com/$G/$R"
 
+# Arrow Symbol
+A="&#8594"
+
 rm -rf ./$W/$T/*
 mkdir -p ./$W/$T/lists/$S
 
@@ -52,11 +55,8 @@ do
   url="$baseURL/$B/"
   echo "$B" >> ./$W/$T/lists/$S.list
   echo "  - [$B](/$R/$T/$B)" >> ./$W/$T/$I
-  echo "    - [Edit $B on GitHub]($url)" >> ./$W/$T/$I
   cat ./$H >> ./$W/$T/$B.md
-  echo -e "[Home](/$R/) &#8594; [$S](/$R/$T)"\
-" &#8594; [$B](/$R/$T/$B)  " >> ./$W/$T/$B.md
-  echo "  - [$PAGE]($PAGEURL)" >> ./$W/$T/$B.md
+  echo -e "[Home](/$R/) $A [$S](/$R/$T) $A [$B](/$R/$T/$B)">> ./$W/$T/$B.md
   for j in $i/*
   do
     PAGE=$(basename $j | cut -f 1 -d '.')
@@ -69,5 +69,3 @@ done
 echo -e "\n\n<small>This page was automatically"\
 " generated via [wikify]($GHURL/blob/master/$R)."\
 "</small>" >> ./$W/$T/$I
-
-lua main.lua $1 $2 $3 $4 $5 $6
