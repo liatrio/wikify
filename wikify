@@ -69,12 +69,12 @@ do
     PAGE=$(basename $j | cut -f 1 -d '.')
     cat ./$H >> ./$W/$T/$B/$PAGE.md
     HSBP="$HSB $A [$PAGE](/$R/$T/$B/$PAGE)"
-    echo -e "$HSBP" >> ./$W/$T/$B/$PAGE.md
     PAGEURL="$url$PAGE.$E"
     echo "$PAGE" >> ./$W/$T/lists/$S/$B.list
     echo "  - [$PAGE](/$R/$T/$B/$PAGE)" >> ./$W/$T/$B.md
     cat << EOM > ./$W/$T/$B/$PAGE.md
-<iframe src="http://docs.google.com/gview?url=$PAGEURL&embedded=true" style="width:600px; height:500px;" frameborder="0"></iframe>
+$HSBP
+<iframe src="http://docs.google.com/gview?url=$PAGEURL&embedded=true" style="width:600px; height:700px;" frameborder="0"></iframe>
 EOM
   done
 done
