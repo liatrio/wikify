@@ -1,5 +1,1 @@
-\n<object data="https://github.com/liatrio/wikify/raw/master/content/Toolbelt/slack.pdf" type="application/pdf" width="700px" height="700px">
-    <embed src="https://github.com/liatrio/wikify/raw/master/content/Toolbelt/slack.pdf">
-        This browser does not support PDFs. Please download the PDF to view it: <a href="https://github.com/liatrio/wikify/raw/master/content/Toolbelt/slack.pdf">Download PDF</a>.</p>
-    </embed>
-</object>
+<iframe src="http://docs.google.com/gview?url=https://github.com/liatrio/wikify/raw/master/content/Toolbelt/slack.pdf&embedded=true" style="width:600px; height:500px;" frameborder="0"></iframe>
